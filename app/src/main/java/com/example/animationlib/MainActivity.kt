@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val imageView:ImageView=findViewById(R.id.imageView)
        val anim= AnimationKC(this)
-        anim.AnimationStater(imageView,anim.rotate90)
+        imageView.setOnClickListener {
+
+            anim.AnimationStater(imageView,anim.toright)
+
+        }
     }
 }
+
