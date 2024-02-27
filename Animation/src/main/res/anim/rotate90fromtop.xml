@@ -4,4 +4,4 @@
     android:toDegrees="90"
     android:pivotX="50%"
     android:pivotY="00%"
-    android:duration="1000" />
+    android:duration="500" />
