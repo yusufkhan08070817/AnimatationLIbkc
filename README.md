@@ -16,13 +16,13 @@ dependencyResolutionManagement {
 # Then, add the dependency:
 ```
 dependencies {
-    implementation "com.github.yusufkhan08070817:AnimatationLIbkc:Tag"
+    implementation ("com.github.yusufkhan08070817:AnimatationLIbkc:Tag")
 }
 
 ```
 ## Replace Tag =
 ``` 
-1.0
+1.0.1
 ```
 with the specific version you wish to use.
 
