@@ -2,6 +2,7 @@ package com.example.animationlib
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 
 import android.widget.ImageView
 import com.example.animation.LIB.AnimationKC
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
        val anim= AnimationKC(this)
         imageView.setOnClickListener {
 
-            anim.AnimationStater(imageView,anim.toright)
+
 
         }
     }
