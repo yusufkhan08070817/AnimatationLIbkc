@@ -8,110 +8,147 @@ import android.view.animation.AnimationUtils
 import com.example.animation.R
 
 
-class AnimationKC( context: Context) {
-    val fadein = AnimationUtils.loadAnimation(context, R.anim.fadein)
-    val fadein_with_last_state = AnimationUtils.loadAnimation(context, R.anim.fadein_with_last_state)
-    val fadeout=AnimationUtils.loadAnimation(context, R.anim.fadeout)
-    val fadeout_with_last_state=AnimationUtils.loadAnimation(context, R.anim.fadeoutwithstate)
-    val toup=AnimationUtils.loadAnimation(context, R.anim.toup)
-    val toup_with_fadeout=AnimationUtils.loadAnimation(context, R.anim.toup_with_fadein)
-    val toup_with_fadeout_with_state=AnimationUtils.loadAnimation(context, R.anim.toupwithfadewithstate)
-    val todown=AnimationUtils.loadAnimation(context, R.anim.todown)
-    val todown_with_fadein=AnimationUtils.loadAnimation(context, R.anim.todown_with_fade)
-    val todown_with_fadein_with_state=AnimationUtils.loadAnimation(context, R.anim.todownwithfadewithstate)
-    val toright=AnimationUtils.loadAnimation(context, R.anim.toright)
-    val go_out_from_right=AnimationUtils.loadAnimation(context, R.anim.outtoright)
-    val toleft=AnimationUtils.loadAnimation(context, R.anim.toleft)
-    val go_out_from_left=AnimationUtils.loadAnimation(context, R.anim.outtoleft)
-    val go_out_from_left_with_state=AnimationUtils.loadAnimation(context, R.anim.outleftwithsatae)
-    val go_out_from_right_with_state=AnimationUtils.loadAnimation(context, R.anim.outrightwithstate)
-    val zero_to_origal=AnimationUtils.loadAnimation(context, R.anim.zero_to_orignal)
-    val orignal_to_zero=AnimationUtils.loadAnimation(context, R.anim.orignal_to_zero)
-    val orignal_to_zero_with_state=AnimationUtils.loadAnimation(context, R.anim.orignal_to_zero_with_state)
-    val rotate90=AnimationUtils.loadAnimation(context, R.anim.rotate90)
-    val rotate90_with_state=AnimationUtils.loadAnimation(context, R.anim.rotate90withstate)
-    val rotate90_from_top=AnimationUtils.loadAnimation(context, R.anim.rotate90fromtop)
-    val rotate90_from_bottom=AnimationUtils.loadAnimation(context, R.anim.rotate90frombottom)
-    val rotate180=AnimationUtils.loadAnimation(context, R.anim.rotate180)
-    val rotate180_from_top=AnimationUtils.loadAnimation(context, R.anim.rotate180fromtop)
-    val rotate180_from_bottom=AnimationUtils.loadAnimation(context, R.anim.rotate180frombottom)
-    val rotate270=AnimationUtils.loadAnimation(context, R.anim.rotate270)
-    val rotate270_from_top=AnimationUtils.loadAnimation(context, R.anim.rotate270fromtop)
-    val rotate270_from_bottom=AnimationUtils.loadAnimation(context, R.anim.rotate270frombottom)
-    val rotate360=AnimationUtils.loadAnimation(context, R.anim.rotate360)
-    val rotate360_from_top=AnimationUtils.loadAnimation(context, R.anim.rotate360fromtop)
-    val rotate360_from_bottom=AnimationUtils.loadAnimation(context, R.anim.rotate360frombottom)
+class AnimationKC(val context: Context) {
+    lateinit var animationchane: AnimationKC
+    lateinit var v: View
 
-    val long_fadein = AnimationUtils.loadAnimation(context, R.anim.long_fadein)
-    val long_fadein_with_last_state = AnimationUtils.loadAnimation(context, R.anim.long_fadein_with_last_state)
-    val long_fadeout=AnimationUtils.loadAnimation(context, R.anim.long_fadeout)
-    val long_fadeout_with_last_state=AnimationUtils.loadAnimation(context, R.anim.long_fadeoutwithstate)
-    val long_toup=AnimationUtils.loadAnimation(context, R.anim.long_toup)
-    val long_toup_with_fadeout=AnimationUtils.loadAnimation(context, R.anim.long_toup_with_fadein)
-    val long_toup_with_fadeout_with_state=AnimationUtils.loadAnimation(context, R.anim.long_toupwithfadewithstate)
-    val long_todown=AnimationUtils.loadAnimation(context, R.anim.long_todown)
-    val long_todown_with_fadein=AnimationUtils.loadAnimation(context, R.anim.long_todown_with_fade)
-    val long_todown_with_fadein_with_state=AnimationUtils.loadAnimation(context, R.anim.long_todownwithfadewithstate)
-    val long_toright=AnimationUtils.loadAnimation(context, R.anim.long_toright)
-    val long_go_out_from_right=AnimationUtils.loadAnimation(context, R.anim.long_outtoright)
-    val long_toleft=AnimationUtils.loadAnimation(context, R.anim.long_toleft)
-    val long_go_out_from_left=AnimationUtils.loadAnimation(context, R.anim.long_outtoleft)
-    val long_go_out_from_left_with_state=AnimationUtils.loadAnimation(context, R.anim.long_outleftwithsatae)
-    val long_go_out_from_right_with_state=AnimationUtils.loadAnimation(context, R.anim.long_outrightwithstate)
-    val long_zero_to_origal=AnimationUtils.loadAnimation(context, R.anim.long_zero_to_orignal)
-    val long_orignal_to_zero=AnimationUtils.loadAnimation(context, R.anim.long_orignal_to_zero)
-    val long_orignal_to_zero_with_state=AnimationUtils.loadAnimation(context, R.anim.long_orignal_to_zero_with_state)
-    val long_rotate90=AnimationUtils.loadAnimation(context, R.anim.long_rotate90)
-    val long_rotate90_with_state=AnimationUtils.loadAnimation(context, R.anim.long_rotate90withstate)
-    val long_rotate90_from_top=AnimationUtils.loadAnimation(context, R.anim.long_rotate90fromtop)
-    val long_rotate90_from_bottom=AnimationUtils.loadAnimation(context, R.anim.long_rotate90frombottom)
-    val long_rotate180=AnimationUtils.loadAnimation(context, R.anim.long_rotate180)
-    val long_rotate180_from_top=AnimationUtils.loadAnimation(context, R.anim.long_rotate180fromtop)
-    val long_rotate180_from_bottom=AnimationUtils.loadAnimation(context, R.anim.long_rotate180frombottom)
-    val long_rotate270=AnimationUtils.loadAnimation(context, R.anim.long_rotate270)
-    val long_rotate270_from_top=AnimationUtils.loadAnimation(context, R.anim.long_rotate270fromtop)
-    val long_rotate270_from_bottom=AnimationUtils.loadAnimation(context, R.anim.long_rotate270frombottom)
-    val long_rotate360=AnimationUtils.loadAnimation(context, R.anim.long_rotate360)
-    val long_rotate360_from_top=AnimationUtils.loadAnimation(context, R.anim.long_rotate360fromtop)
-    val long_rotate360_from_bottom=AnimationUtils.loadAnimation(context, R.anim.long_rotate360frombottom)
+    enum class AnimationType(private val resourceId: Int) {
+        FADE_IN(R.anim.fadein),
+        FADE_IN_WITH_LAST_STATE(R.anim.fadein_with_last_state),
+        FADE_OUT(R.anim.fadeout),
+        FADE_OUT_WITH_LAST_STATE(R.anim.fadein_with_last_state),
+        TO_UP(R.anim.toup),
+        TO_UP_WITH_FADE_OUT(R.anim.toup_with_fadein),
+        TO_UP_WITH_FADE_OUT_WITH_STATE(R.anim.toup_with_fadein),
+        TO_DOWN(R.anim.todown),
+        TO_DOWN_WITH_FADE_IN(R.anim.todown_with_fade),
+        TO_DOWN_WITH_FADE_IN_WITH_STATE(R.anim.todownwithfadewithstate),
+        TO_RIGHT(R.anim.toright),
+        GO_OUT_FROM_RIGHT(R.anim.outtoright),
+        TO_LEFT(R.anim.toleft),
+        GO_OUT_FROM_LEFT(R.anim.outtoleft),
+        GO_OUT_FROM_LEFT_WITH_STATE(R.anim.outleftwithsatae),
+        GO_OUT_FROM_RIGHT_WITH_STATE(R.anim.outrightwithstate),
+        ZERO_TO_ORIGINAL(R.anim.zero_to_orignal),
+        ORIGINAL_TO_ZERO(R.anim.orignal_to_zero),
+        ORIGINAL_TO_ZERO_WITH_STATE(R.anim.orignal_to_zero_with_state),
+        ROTATE_90(R.anim.rotate90),
+        ROTATE_90_WITH_STATE(R.anim.rotate90withstate),
+        ROTATE_90_FROM_TOP(R.anim.rotate90fromtop),
+        ROTATE_90_FROM_BOTTOM(R.anim.rotate90frombottom),
+        ROTATE_180(R.anim.rotate180),
+        ROTATE_180_FROM_TOP(R.anim.rotate180fromtop),
+        ROTATE_180_FROM_BOTTOM(R.anim.rotate180frombottom),
+        ROTATE_270(R.anim.rotate270),
+        ROTATE_270_FROM_TOP(R.anim.rotate270fromtop),
+        ROTATE_270_FROM_BOTTOM(R.anim.rotate270frombottom),
+        ROTATE_360(R.anim.rotate360),
+        ROTATE_360_FROM_TOP(R.anim.rotate360fromtop),
+        ROTATE_360_FROM_BOTTOM(R.anim.rotate360frombottom),
 
-    val short_fadein = AnimationUtils.loadAnimation(context, R.anim.short_fadein)
-    val short_fadein_with_last_state = AnimationUtils.loadAnimation(context, R.anim.short_fadein_with_last_state)
-    val short_fadeout=AnimationUtils.loadAnimation(context, R.anim.short_fadeout)
-    val short_fadeout_with_last_state=AnimationUtils.loadAnimation(context, R.anim.short_fadeoutwithstate)
-    val short_toup=AnimationUtils.loadAnimation(context, R.anim.short_toup)
-    val short_toup_with_fadeout=AnimationUtils.loadAnimation(context, R.anim.short_toup_with_fadein)
-    val short_toup_with_fadeout_with_state=AnimationUtils.loadAnimation(context, R.anim.short_toupwithfadewithstate)
-    val short_todown=AnimationUtils.loadAnimation(context, R.anim.short_todown)
-    val short_todown_with_fadein=AnimationUtils.loadAnimation(context, R.anim.short_todown_with_fade)
-    val short_todown_with_fadein_with_state=AnimationUtils.loadAnimation(context, R.anim.short_todownwithfadewithstate)
-    val short_toright=AnimationUtils.loadAnimation(context, R.anim.short_toright)
-    val short_go_out_from_right=AnimationUtils.loadAnimation(context, R.anim.short_outtoright)
-    val short_toleft=AnimationUtils.loadAnimation(context, R.anim.short_toleft)
-    val short_go_out_from_left=AnimationUtils.loadAnimation(context, R.anim.short_outtoleft)
-    val short_go_out_from_left_with_state=AnimationUtils.loadAnimation(context, R.anim.short_outleftwithsatae)
-    val short_go_out_from_right_with_state=AnimationUtils.loadAnimation(context, R.anim.short_outrightwithstate)
-    val short_zero_to_origal=AnimationUtils.loadAnimation(context, R.anim.short_zero_to_orignal)
-    val short_orignal_to_zero=AnimationUtils.loadAnimation(context, R.anim.short_orignal_to_zero)
-    val short_orignal_to_zero_with_state=AnimationUtils.loadAnimation(context, R.anim.short_orignal_to_zero_with_state)
-    val short_rotate90=AnimationUtils.loadAnimation(context, R.anim.short_rotate90)
-    val short_rotate90_with_state=AnimationUtils.loadAnimation(context, R.anim.short_rotate90withstate)
-    val short_rotate90_from_top=AnimationUtils.loadAnimation(context, R.anim.short_rotate90fromtop)
-    val short_rotate90_from_bottom=AnimationUtils.loadAnimation(context, R.anim.short_rotate90frombottom)
-    val short_rotate180=AnimationUtils.loadAnimation(context, R.anim.short_rotate180)
-    val short_rotate180_from_top=AnimationUtils.loadAnimation(context, R.anim.short_rotate180fromtop)
-    val short_rotate180_from_bottom=AnimationUtils.loadAnimation(context, R.anim.short_rotate180frombottom)
-    val short_rotate270=AnimationUtils.loadAnimation(context, R.anim.short_rotate270)
-    val short_rotate270_from_top=AnimationUtils.loadAnimation(context, R.anim.short_rotate270fromtop)
-    val short_rotate270_from_bottom=AnimationUtils.loadAnimation(context, R.anim.short_rotate270frombottom)
-    val short_rotate360=AnimationUtils.loadAnimation(context, R.anim.short_rotate360)
-    val short_rotate360_from_top=AnimationUtils.loadAnimation(context, R.anim.short_rotate360fromtop)
-    val short_rotate360_from_bottom=AnimationUtils.loadAnimation(context, R.anim.short_rotate360frombottom)
+        LONG_FADE_IN(R.anim.long_fadein),
+        LONG_FADE_IN_WITH_LAST_STATE(R.anim.long_fadein_with_last_state),
+        LONG_FADE_OUT(R.anim.long_fadeout),
+        LONG_FADE_OUT_WITH_LAST_STATE(R.anim.long_fadeoutwithstate),
+        LONG_TO_UP(R.anim.long_toup),
+        LONG_TO_UP_WITH_FADE_OUT(R.anim.long_toup_with_fadein),
+        LONG_TO_UP_WITH_FADE_OUT_WITH_STATE(R.anim.long_toupwithfadewithstate),
+        LONG_TO_DOWN(R.anim.long_todown),
+        LONG_TO_DOWN_WITH_FADE_IN(R.anim.long_todown_with_fade),
+        LONG_TO_DOWN_WITH_FADE_IN_WITH_STATE(R.anim.long_todownwithfadewithstate),
+        LONG_TO_RIGHT(R.anim.long_toright),
+        LONG_GO_OUT_FROM_RIGHT(R.anim.long_outtoright),
+        LONG_TO_LEFT(R.anim.long_toleft),
+        LONG_GO_OUT_FROM_LEFT(R.anim.long_outtoleft),
+        LONG_GO_OUT_FROM_LEFT_WITH_STATE(R.anim.long_outleftwithsatae),
+        LONG_GO_OUT_FROM_RIGHT_WITH_STATE(R.anim.long_outrightwithstate),
+        LONG_ZERO_TO_ORIGINAL(R.anim.long_zero_to_orignal),
+        LONG_ORIGINAL_TO_ZERO(R.anim.long_orignal_to_zero),
+        LONG_ORIGINAL_TO_ZERO_WITH_STATE(R.anim.long_orignal_to_zero_with_state),
+        LONG_ROTATE_90(R.anim.long_rotate90),
+        LONG_ROTATE_90_WITH_STATE(R.anim.long_rotate90withstate),
+        LONG_ROTATE_90_FROM_TOP(R.anim.long_rotate90fromtop),
+        LONG_ROTATE_90_FROM_BOTTOM(R.anim.long_rotate90frombottom),
+        LONG_ROTATE_180(R.anim.long_rotate180),
+        LONG_ROTATE_180_FROM_TOP(R.anim.long_rotate180fromtop),
+        LONG_ROTATE_180_FROM_BOTTOM(R.anim.long_rotate180frombottom),
+        LONG_ROTATE_270(R.anim.long_rotate270),
+        LONG_ROTATE_270_FROM_TOP(R.anim.long_rotate270fromtop),
+        LONG_ROTATE_270_FROM_BOTTOM(R.anim.long_rotate270frombottom),
+        LONG_ROTATE_360(R.anim.long_rotate360),
+        LONG_ROTATE_360_FROM_TOP(R.anim.long_rotate360fromtop),
+        LONG_ROTATE_360_FROM_BOTTOM(R.anim.long_rotate360frombottom),
 
+        SHORT_FADE_IN(R.anim.short_fadein),
+        SHORT_FADE_IN_WITH_LAST_STATE(R.anim.short_fadein_with_last_state),
+        SHORT_FADE_OUT(R.anim.short_fadeout),
+        SHORT_FADE_OUT_WITH_LAST_STATE(R.anim.short_fadeoutwithstate),
+        SHORT_TO_UP(R.anim.short_toup),
+        SHORT_TO_UP_WITH_FADE_OUT(R.anim.short_toup_with_fadein),
+        SHORT_TO_UP_WITH_FADE_OUT_WITH_STATE(R.anim.short_toupwithfadewithstate),
+        SHORT_TO_DOWN(R.anim.short_todown),
+        SHORT_TO_DOWN_WITH_FADE_IN(R.anim.short_todown_with_fade),
+        SHORT_TO_DOWN_WITH_FADE_IN_WITH_STATE(R.anim.short_todownwithfadewithstate),
+        SHORT_TO_RIGHT(R.anim.short_toright),
+        SHORT_GO_OUT_FROM_RIGHT(R.anim.short_outtoright),
+        SHORT_TO_LEFT(R.anim.short_toleft),
+        SHORT_GO_OUT_FROM_LEFT(R.anim.short_outtoleft),
+        SHORT_GO_OUT_FROM_LEFT_WITH_STATE(R.anim.short_outleftwithsatae),
+        SHORT_GO_OUT_FROM_RIGHT_WITH_STATE(R.anim.short_outrightwithstate),
+        SHORT_ZERO_TO_ORIGINAL(R.anim.short_zero_to_orignal),
+        SHORT_ORIGINAL_TO_ZERO(R.anim.short_orignal_to_zero),
+        SHORT_ORIGINAL_TO_ZERO_WITH_STATE(R.anim.short_orignal_to_zero_with_state),
+        SHORT_ROTATE_90(R.anim.short_rotate90),
+        SHORT_ROTATE_90_WITH_STATE(R.anim.short_rotate90withstate),
+        SHORT_ROTATE_90_FROM_TOP(R.anim.short_rotate90fromtop),
+        SHORT_ROTATE_90_FROM_BOTTOM(R.anim.short_rotate90frombottom),
+        SHORT_ROTATE_180(R.anim.short_rotate180),
+        SHORT_ROTATE_180_FROM_TOP(R.anim.short_rotate180fromtop),
+        SHORT_ROTATE_180_FROM_BOTTOM(R.anim.short_rotate180frombottom),
+        SHORT_ROTATE_270(R.anim.short_rotate270),
+        SHORT_ROTATE_270_FROM_TOP(R.anim.short_rotate270fromtop),
+        SHORT_ROTATE_270_FROM_BOTTOM(R.anim.short_rotate270frombottom),
+        SHORT_ROTATE_360(R.anim.short_rotate360),
+        SHORT_ROTATE_360_FROM_TOP(R.anim.short_rotate360fromtop),
+        SHORT_ROTATE_360_FROM_BOTTOM(R.anim.short_rotate360frombottom),
+        CLOCK(R.anim.clock),
+        CLOCK_INFINITE(R.anim.clockinfinate),
+        VIBRATE(R.anim.vibrate);
 
-
-    fun AnimationStater(View:View,animatation:Animation)
-    {
-        View.startAnimation(animatation)
+        fun getAnimation(context: Context): Animation {
+            return AnimationUtils.loadAnimation(context, resourceId)
+        }
     }
+
+    fun loadAnimation(animationType: AnimationType): Animation {
+        return animationType.getAnimation(context)
+    }
+
+    fun startAnimation(view: View, animationType: AnimationType) {
+        val animation = loadAnimation(animationType)
+        view.startAnimation(animation)
+    }
+
+    fun chain(AnimatatonType: AnimationType, nextani: () -> Unit): AnimationKC {
+        val ana = AnimationKC(context)
+        val lodede = ana.loadAnimation(AnimatatonType)
+        lodede.setAnimationListener(/* listener = */ object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                nextani()
+            }
+
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+
+        })
+        v.startAnimation(lodede)
+        return ana
+    }
+
 }
