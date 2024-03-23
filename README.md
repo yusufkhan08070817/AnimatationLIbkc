@@ -1,6 +1,6 @@
 # Welcome to AnimationLibKC!
 
-## AnimationLibKC is a powerful Android animation library that offers a wide range of animations for enhancing your user interfaces. With over 20 animations already included and plans for continuous expansion, you can bring your apps to life with both 2D and 3D effects.
+## AnimationLibKC is a powerful Android animation library that offers a wide range of animations for enhancing your user interfaces. With over 100 animations already included and plans for continuous expansion, you can bring your apps to life with both 2D and 3D effects.
 
 # Installation
 ## To integrate AnimationLibKC into your Android project, add the following lines to your project's build.gradle file:
@@ -22,12 +22,12 @@ dependencies {
 ```
 ## Replace Tag =
 ``` 
-1.0.1
+1.0.2
 ```
 with the specific version you wish to use.
 
 Features
-20+ Animations: Choose from a variety of animations to suit your app's needs.
+100+ Animations: Choose from a variety of animations to suit your app's needs.
 2D and 3D Animations: Enjoy a mix of 2D and 3D effects for versatile visual enhancements.
 Easy Integration: Simply add the library to your project and start using animations with ease.
 Usage
@@ -36,13 +36,17 @@ Using AnimationLibKC is straightforward. Simply follow these steps:
 Import Library: Make sure the library is added to your project's dependencies.
 Choose Animation: Select the animation you want to use from the library.
 # Example
-##H ere's a quick example of how to use AnimationLibKC:
+## Here's a quick example of how to use AnimationLibKC:
 ```
 
 val imageView:ImageView=findViewById(R.id.imageView)
 val anim= AnimationKC(this)
-anim.AnimationStater(imageView,anim.rotate90)
+anim.AnimationStater(imageView,anim.rotate90)// 
 ```
+### long_rotate here long is use for long duration 
+### short for short duration  
+### for normal dont use short and long
+
 # Contribution
 We welcome contributions to AnimationLibKC! Whether you want to add new animations, improve existing ones, or fix bugs, your contributions are highly appreciated. Feel free to fork the repository, make your changes, and submit a pull request.
 
